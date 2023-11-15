@@ -1,0 +1,34 @@
+
+@import "../../style/sass/mixins";
+@import "../../style/sass/variables";
+
+@mixin transition($property,$duration)
+{
+   transition-property: $property;
+   transition-duration: $duration;
+}
+.cat-nav-container
+{
+    background-color: #1e1e1e;
+    max-width: 100%;
+    border-top: #444444 solid 1px;
+
+    .list-items
+    {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0.8em 2em;
+        padding: 0.5em ;
+        padding-bottom: 0.2em;
+        height: 2.5em;
+       a{
+         text-decoration: none;
+         color: white;
+         font-size: 0.9em;
+         font-weight: 700;
+
+         @include underline-transition(0.3);
+       }
+    }
+
+}
